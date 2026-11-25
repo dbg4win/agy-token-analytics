@@ -1,0 +1,33 @@
+{
+  "name": "token-analytics",
+  "version": "1.0.0",
+  "description": "Zero-dependency Antigravity Sidecar UI plugin for real-time context window telemetry, session token tracking, prompt-cache cost savings, and agent-wide usage analytics.",
+  "type": "module",
+  "private": false,
+  "license": "MIT",
+  "author": "dbg4win <https://github.com/dbg4win>",
+  "homepage": "https://github.com/dbg4win/token-analytics#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbg4win/token-analytics.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dbg4win/token-analytics/issues"
+  },
+  "keywords": [
+    "antigravity",
+    "token-analytics",
+    "context-window",
+    "prompt-caching",
+    "telemetry",
+    "sidecar"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "test": "node sidecars/token_analytics/test/verify.mjs",
+    "test:live": "node sidecars/token_analytics/test/verify.mjs --live",
+    "dev": "node sidecars/token_analytics/main.mjs --standalone-port 17910"
+  }
+}

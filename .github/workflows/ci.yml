@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  verify:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node: [22, 24]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Validate JSON manifests
+        run: |
+          node -e "for (const f of ['plugin.json', 'package.json', 'sidecars/token_analytics/sidecar.json']) JSON.parse(require('node:fs').readFileSync(f, 'utf8')); console.log('[PASS] JSON manifests valid');"
+      - name: Run offline verification suite
+        run: npm test

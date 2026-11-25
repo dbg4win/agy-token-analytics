@@ -1,0 +1,27 @@
+{
+  "name": "token-analytics",
+  "displayName": "Token Analytics",
+  "version": "1.0.0",
+  "description": "Display current conversation context window breakdown, session token usage, cost & cache savings, and agent-wide analytics in Antigravity.",
+  "license": "MIT",
+  "logo": "assets/logo.svg",
+  "author": {
+    "name": "dbg4win",
+    "url": "https://github.com/dbg4win"
+  },
+  "repository": "https://github.com/dbg4win/token-analytics",
+  "homepage": "https://github.com/dbg4win/token-analytics#readme",
+  "keywords": [
+    "antigravity",
+    "token-analytics",
+    "context-window",
+    "telemetry",
+    "prompt-cache",
+    "cost-tracking"
+  ],
+  "suggestedPrompts": [
+    "Open Token Analytics to inspect current conversation context window usage",
+    "Analyze token composition and prompt cache hit rate for this session",
+    "Show agent-wide token usage, cost, and focus time analytics"
+  ]
+}
